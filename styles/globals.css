@@ -49,4 +49,5 @@ a {
 * {
   box-sizing: border-box;
   transition: all 300ms ease;
+  list-style: none;
 }
