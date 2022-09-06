@@ -1,14 +1,17 @@
 import {UilFacebook, UilInstagram, UilTwitter} from '@iconscout/react-unicons'
 import css from '../styles/Footer.module.css'
+import Image from 'next/image'
+import Logo from '../assets/Logo.png'
 
 export default function Footer() {
     return(
        <footer className={css.container}>
-            <span>ALL RIGHTS RESERVED</span>
             <div className={css.social}>
-                <UilTwitter/>
-                <UilInstagram/>
-                <UilFacebook/>
+                <UilTwitter  size={30}/>
+                <UilInstagram size={30}/>
+                <UilFacebook size={30}/>
             </div>
+                <h5> &copy; Fudo</h5>
+
        </footer>
     )}
