@@ -11,7 +11,7 @@ export default function Footer() {
                 <UilInstagram size={30}/>
                 <UilFacebook size={30}/>
             </div>
-                <h5> &copy; Fudo</h5>
+                <h5> &copy; Doze Pizza</h5>
 
        </footer>
     )}
