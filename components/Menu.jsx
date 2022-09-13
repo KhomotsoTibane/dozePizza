@@ -21,7 +21,7 @@ export default function Menu({pizzas}) {
                         <Link href={`./pizza/${pizza.slug.current}`}>
                             <div className={css.imageWrapper}>
                                 <Image loader={()=>src} 
-                                src={src} alt='' objectFit='cover' layout='fill'/>
+                                src={src} alt='' objectFit='cover' layout='fill' unoptimized/>
                             </div>
                         </Link>
                         <span>{pizza.name}</span>

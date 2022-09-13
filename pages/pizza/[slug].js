@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Layout from "../../components/Layout";
-import { client, urlFor } from "../../lib/client";
+import { urlFor, client } from "../../lib/client";
 import css from "../../styles/Pizza.module.css"
-import LeftArrow from "../../assets/arrowLeft.png"
-import RightArrow from "../../assets/arrowRight.png"
 import { UilPlusCircle, UilMinusCircle } from '@iconscout/react-unicons'
 import { useState } from "react";
+import { useStore } from "../../store/store"
+import toast, {Toaster} from 'react-hot-toast'
 
 export default function Pizza({pizza}) {
  
@@ -13,6 +13,12 @@ export default function Pizza({pizza}) {
 
     const [size, setSize] = useState(1)
     const [quantity, setQuantity] = useState(1)
+
+    const addPizza = useStore((state)=>state.addPizza)
+    const addToCart = ()=> {
+        addPizza({...pizza, price:pizza.price[size], quantity:quantity, size:size})
+        toast.success('Added to cart')
+    }
     return(
         <Layout>
             <div className={css.container}>
@@ -43,17 +49,19 @@ export default function Pizza({pizza}) {
                         </div>
                     </div>
 
-                    <button className={`btn ${css.btn}`}>
+                    <button className={`btn ${css.btn}`} onClick={addToCart}>
                         Add to Cart
                     </button>
                 </div>
+                <Toaster/>
             </div>
         </Layout>
     )
 }
 
 export async function getStaticPaths(){
-    //extract all the pizza objects where slug is defined
+    //slug - the unique indentifying part of a web address, for this case it will be the pizza name 'chicken-pizza'
+    //use the client to fetch the pizza document with the pizza objects where the slug is defined.
     const paths = await client.fetch(`*[_type=="pizza" && defined(slug.current)][].slug.current`)
 
     return{
