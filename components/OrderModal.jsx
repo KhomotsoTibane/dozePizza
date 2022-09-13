@@ -3,10 +3,12 @@ import { useState } from "react"
 import toast,{ Toaster } from "react-hot-toast"
 import { createOrder } from "../lib/orderHandler"
 import { useStore } from "../store/store"
+import {useRouter} from "next/router"
 import css from "../styles/OrderModal.module.css"
 
 export default function OrderModal({opened, setIsOpen, paymentMethod}) {
     const theme = useMantineTheme()
+    const router = useRouter()
     const [formData, setformData] = useState({})
     const clearCart = useStore((state)=>state.clearCart)
 
@@ -22,6 +24,8 @@ export default function OrderModal({opened, setIsOpen, paymentMethod}) {
         toast.success("Order Placed");
         clearCart();
         {typeof window !== "undefined" && localStorage.setItem("order", id)}
+
+        router.push(`/order/${id}`)
     }
 
     const total = typeof window !== "undefined" && localStorage.getItem("total")

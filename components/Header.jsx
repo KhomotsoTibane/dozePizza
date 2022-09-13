@@ -2,12 +2,18 @@ import Image from 'next/image'
 import css from '../styles/Header.module.css'
 import Logo from '../assets/r.png'
 // import Logo from '../assets/plogo.png'
-import {UilShoppingBag} from '@iconscout/react-unicons'
+import {UilShoppingBag, UilReceipt} from '@iconscout/react-unicons'
 import { useStore } from '../store/store'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
 
+    const [order, setOrder] = useState("")
+    useEffect(() => {
+      setOrder(localStorage.getItem("order"))  
+    }, [])
+    
     const cartItems = useStore((state)=> state.cart.pizzas.length)
     return(
         <header className={css.header}>
@@ -16,9 +22,9 @@ export default function Header() {
                 <span>Doze Pizza</span>
            </div>
             <ul className={css.menu}>
-                <li><a href="/">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Contact</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li>Menu</li>
+                <li>Contact</li>
             </ul>
            <div className={css.rightSide}>
                 <Link href='/cart'>
@@ -27,6 +33,18 @@ export default function Header() {
                         <div className={css.badge}>{cartItems}</div>
                     </div>
                 </Link>
+
+                {order && (
+                    <Link href={`/order/${order}`}>
+                        <div className={css.cart}>
+                            <UilReceipt size={35} color='#2e2e2e'/>
+                            {order !='' && 
+                            <div className={css.badge}>1</div>
+                            }
+                           
+                        </div>
+                    </Link>
+                )}
            </div> 
         </header>
     )}
