@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import css from '../styles/Header.module.css'
 import Logo from '../assets/r.png'
-// import Logo from '../assets/plogo.png'
 import {UilShoppingBag, UilReceipt} from '@iconscout/react-unicons'
 import { useStore } from '../store/store'
 import Link from 'next/link'

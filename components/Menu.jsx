@@ -6,7 +6,7 @@ import {urlFor, client} from "../lib/client"
 export default function Menu({pizzas}) {
 
     return (
-        <div className={css.container}>
+        <div className={css.container} id="menu">
             <div className={css.heading}>
                 <span>Allow us</span>
                 <span>To Amaze You</span>

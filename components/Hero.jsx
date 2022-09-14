@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import css from '../styles/Hero.module.css'
-import Cherry from '../assets/Cherry.png'
 import HeroImage from '../assets/HeroImage.png'
 import {UilPhone} from '@iconscout/react-unicons'
 import Pizza1 from '../assets/p1.jpg'
+import pizza from '../assets/r.png'
 
 export default function Hero() {
     return (
@@ -11,8 +11,8 @@ export default function Hero() {
             {/*********left side*******/}
             <div className={css.left}>
                 <div className={css.cherryDiv}>
-                    <span>Faster than ever</span>
-                    <Image src={Cherry} alt="" width={40} height={25}/>
+                    <span>When in doubt, pizza</span>
+                    <Image src={pizza} alt="" width={40} height={25}/>
                 </div>
                 <div className={css.heroText}>
                     <span>Best <span style={{color:"var(--themeRed)"}}>Pizza </span></span>
@@ -22,7 +22,7 @@ export default function Hero() {
                 <span className={css.miniText}>
                     Our mission is to make sure our tasty pizza is delivered to you for you enjoyment
                 </span>
-                <button className={`btn ${css.btn}`}>Order now</button>
+                <a className={`btn ${css.btn}`} href="#menu" >Order now</a>
             </div>
 
             {/*********right side*******/}
@@ -44,7 +44,7 @@ export default function Hero() {
                     </div>
 
                     <div className={css.details}>
-                        <span>Italian Pizza</span>
+                        <span>Tropical Pizza</span>
                         <span>R99.99</span>
                     </div>
                 </div>

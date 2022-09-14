@@ -1,11 +1,11 @@
 import Layout from "../../components/Layout";
 import { client } from "../../lib/client";
-import css from "../../styles/Order.module.css"
-import Image from "next/image"
-import { UilBill, UilBox } from '@iconscout/react-unicons'
-import cooking from '../../assets/cooking.png'
-import onWay from '../../assets/onway.png'
-import spinner from '../../assets/spinner.svg'
+import css from "../../styles/Order.module.css";
+import Image from "next/image";
+import { UilBill, UilBox } from "@iconscout/react-unicons";
+import cooking from "../../assets/cooking.png";
+import onWay from "../../assets/onway.png";
+import spinner from "../../assets/spinner.svg";
 import { useEffect } from "react";
 
 export const getServerSideProps = async ({params})=>{
@@ -50,7 +50,7 @@ export default function Orders ({order}) {
                         <span>Method</span>
                         <span>
                             {
-                                order.method === 0 ? 'Cash on delivery' : 'Online Payment(Paid)'
+                                order.method === 0 ? "Cash on delivery" : "Online Payment(Paid)"
                             }
                         </span>
                     </div>
@@ -70,11 +70,11 @@ export default function Orders ({order}) {
                         }
                     </div>
                     <div className={css.status}>
-                        <Image src={cooking} alt='' width={50} height={50}/>
+                        <Image src={cooking} alt="" width={50} height={50}/>
                         <span>Cooking</span>
                         {order.status ===1 && (
                             <div className={css.spinner}>
-                                <Image src={spinner} alt=''/>
+                                <Image src={spinner} alt=""/>
                             </div>
                         )}
                         {order.status>1 &&(
@@ -82,11 +82,11 @@ export default function Orders ({order}) {
                         )}
                     </div>
                     <div className={css.status}>
-                        <Image src={onWay} alt='' width={50} height={50}/>
+                        <Image src={onWay} alt="" width={50} height={50}/>
                         <span>In transit</span>
                         {order.status ===2 && (
                             <div className={css.spinner}>
-                                <Image src={spinner} alt=''/>
+                                <Image src={spinner} alt=""/>
                             </div>
                         )}
                         {order.status>2 &&(
@@ -99,7 +99,7 @@ export default function Orders ({order}) {
                         <span>Delivered</span>
                         {order.status ===3 && (
                             <div className={css.spinner}>
-                                <Image src={spinner} alt=''/>
+                                <Image src={spinner} alt=""/>
                             </div>
                         )}
                         {order.status>3 &&(

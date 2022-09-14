@@ -1,5 +1,4 @@
 //handle requests of order from client to server
-
 import { client } from "../../lib/client";
 
 export default async function handler(req, res){
@@ -9,7 +8,7 @@ export default async function handler(req, res){
             const newOrder = await JSON.parse(req.body);
             try{
                 await client.create({
-                    _type:'order',
+                    _type:"order",
                     name:newOrder.name,
                     address:newOrder.address,
                     phone:newOrder.phone,
@@ -21,7 +20,7 @@ export default async function handler(req, res){
                 })
             }catch(error){
                 console.log(error);
-                res.status(500).json({msg:'Error, check console'})
+                res.status(500).json({msg:"Error, check console"})
             }
             break;
     }

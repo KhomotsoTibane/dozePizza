@@ -1,5 +1,5 @@
 //state management of the pizza cart
-import create from 'zustand'
+import create from "zustand"
 
 export const useStore = create(
     (set)=>({

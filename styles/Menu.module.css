@@ -3,9 +3,6 @@
     flex-direction: column;
     gap: 3rem;
     margin-top: 6rem;
-    /* align-items: center;
-    font-weight: bold;
-    justify-content: center; */
 }
 
 .heading{
@@ -46,8 +43,8 @@
 }
 
 .imageWrapper{
-    height: 16rem;
-    width: 22rem;
+    height: 12.8rem;
+    width: 17.6rem;
     position: relative;
     overflow: hidden;   
 }
