@@ -22,8 +22,8 @@ export default function Header() {
            </div>
             <ul className={css.menu}>
                 <li><Link href="/">Home</Link></li>
-                <li>Menu</li>
-                <li>Contact</li>
+                <li><Link href="/#menu">Menu</Link></li>
+                <li><Link href="/#contact">Contact</Link></li>
             </ul>
            <div className={css.rightSide}>
                 <Link href='/cart'>
