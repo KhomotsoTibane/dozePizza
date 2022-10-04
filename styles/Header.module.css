@@ -60,9 +60,14 @@
     right: -0.5rem;
 }
 
-@media screen and (max-width:560px){
+@media screen and (max-width:600px){
     .menu { 
         gap: 1rem;
+    }
+
+    .rightSide {
+        display: flex;
+        justify-content: space-between;
     }
     
 }

@@ -69,3 +69,24 @@
     background:rgb(159, 230, 53);
     font-size: .8rem;
 }
+
+@media screen and (max-width:820px){
+    .statusContainer{
+        gap: 10rem;
+    }
+   
+}
+
+@media screen and (max-width:600px){
+
+    .details{
+        padding: 1rem;
+        width: 100%
+    }
+    
+    .statusContainer{
+        flex-direction: column;
+        gap: 3rem;
+    }
+   
+}
