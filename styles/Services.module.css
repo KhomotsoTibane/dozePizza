@@ -46,3 +46,9 @@
     width: 20rem;
     text-align: center;
 }
+
+@media screen and (max-width:820px){
+    .servicesCards{
+        flex-wrap: wrap;
+    }
+}

@@ -20,7 +20,7 @@ export const useStore = create(
         removePizza:(index)=>
         set((state)=>({
             cart:{
-                //return all the pizzas without the selected one
+                //return all the pizzas without the selected one (the one to be removed from cart)
                  pizzas: state.cart.pizzas.filter((_pizzas , i) => i !=index)
             }
         })),

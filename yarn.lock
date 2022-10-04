@@ -2033,10 +2033,10 @@
   "resolved" "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   "version" "3.1.1"
 
-"stripe@^9.12.0":
-  "integrity" "sha512-Dn8K+jSoQcXjxCobRI4HXUdHjOXsiF/KszK49fJnkbeCFjZ3EZxLG2JiM/CX+Hcq27NBDtv/Sxhvy+HhTmvyaQ=="
-  "resolved" "https://registry.npmjs.org/stripe/-/stripe-9.16.0.tgz"
-  "version" "9.16.0"
+"stripe@^10.12.0":
+  "integrity" "sha512-4ijMsbTVSy6rzWIkal+/dFGeTXtjqLeZ/oo/jc2jhICbf3Dby0CBTPxAg6ZhBPXQL96TJxI613C/NhhE7LvrWw=="
+  "resolved" "https://registry.npmjs.org/stripe/-/stripe-10.12.0.tgz"
+  "version" "10.12.0"
   dependencies:
     "@types/node" ">=8.1.0"
     "qs" "^6.10.3"

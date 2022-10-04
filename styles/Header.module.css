@@ -15,10 +15,6 @@
   
 }
 
-.logo>:nth-child(1){
-  transform: rotate(360deg);
-}
-
 .logo>span {
     font-weight: bold;
     font-size: 1rem;
@@ -40,7 +36,6 @@
 .rightSide {
     flex: 1;
     display: flex;
-    gap: 1rem;
     justify-content: flex-end;
 }
 
@@ -63,4 +58,11 @@
     justify-content: center;
     align-items: center;
     right: -0.5rem;
+}
+
+@media screen and (max-width:560px){
+    .menu { 
+        gap: 1rem;
+    }
+    
 }

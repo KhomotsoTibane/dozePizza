@@ -65,3 +65,16 @@
     border: 2px solid var(--themeRed);
 
 }
+
+@media screen and (max-width:600px){
+    .container{
+        padding:1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table{
+        border-spacing: .2rem;
+    }
+   
+}
