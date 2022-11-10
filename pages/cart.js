@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { useStore } from "../store/store";
 import css from "../styles/Cart.module.css"
-import { urlFor } from "../lib/client";
+import { urlFor } from "../services/client";
 import Image from "next/image";
 import { UilTimesCircle } from "@iconscout/react-unicons";
 import toast, {Toaster} from "react-hot-toast";
@@ -21,6 +21,7 @@ export default function Cart() {
         toast.error("Item removed");
     }
 
+    
     const total=()=> CartData.pizzas.reduce((a,b)=> a+b.quantity * b.price, 0);
 
     const handleOnDelivery = () => {

@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import { client } from "../../lib/client";
+import { client } from "../../services/client";
 import css from "../../styles/Order.module.css";
 import Image from "next/image";
 import { UilBill, UilBox } from "@iconscout/react-unicons";

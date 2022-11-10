@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Layout from "../../components/Layout";
-import { urlFor, client } from "../../lib/client";
+import { urlFor, client } from "../../services/client";
 import css from "../../styles/Pizza.module.css";
 import { UilPlusCircle, UilMinusCircle } from "@iconscout/react-unicons";
 import { useState } from "react";
@@ -58,6 +58,7 @@ export default function Pizza({pizza}) {
     )
 }
 
+//give all possible paths
 export async function getStaticPaths(){
     //slug - the unique indentifying part of a web address, for this case it will be the pizza name "chicken-pizza"
     //use the client to fetch the pizza document with the pizza objects where the slug is defined.
