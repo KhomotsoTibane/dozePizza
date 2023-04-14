@@ -4,7 +4,7 @@ import css from "../styles/Home.module.css"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Menu from "../components/Menu"
-import {client} from "../lib/client"
+import {client} from "../services/client"
 
 export default function Home({pizzas}) {
   

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import css from "../styles/Menu.module.css"
-import {urlFor, client} from "../lib/client"
+import {urlFor, client} from "../services/client"
 
 export default function Menu({pizzas}) {
 
